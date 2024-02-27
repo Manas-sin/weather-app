@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#content,p,h2{
+ justify-content: left;
+ align-items: end;
+text-align: left;
+}
+
+tr{
+justify-content: space-between;
+margin: 2rem;
+display: flex;
+gap: 1rem;
+justify-content: left;
+
+}
+#container-1,#navebar{
+    background:  rgb(246, 244, 244);
+}
+#date{
+    color: red;
+     margin-left: -2rem;
+}
+.grid{
+   margin-left: -3rem;
+
+}
+.content-weather {
+    justify-content: space-between;
+    gap: 2rem;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     margin-right: 2rem auto;
+}
+button{
+    border: none;
+    width: 100px;
+}
+input{
+    padding: 2px;
+    border: none;
+    
+}

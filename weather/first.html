@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>weather app </title>
+    <link rel="stylesheet" href="first.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- search box -->
+    <div class="container m-5" id="container-1">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-6">
+                    <nav class="navbar">
+                        <div class="card">
+                            <div class="search">
+                                <input type="text" placeholder="cityname">
+                                <button>search</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="container-fluid d-flex">
+                        <div class="content-weather d-flex">
+                            <p>Different Weather?</p>
+                            <span>Wind speed:</span>
+                            <p class="wind"> </p>
+                            <span>latitude:</span>
+                            <p class="lat"> </p> 
+                            <span>longitude:</span>
+                            <p class="lon"> </p> 
+                           
+                        </div>
+                      
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- weather data -->
+    <div class="container">
+        <div class="container text-center">
+            <div class="row">
+                <!-- left content -->
+                <div class="col-sm-5 col-md-6" id="content">
+                    <p id="date" ></p>
+                    <div class="container">
+                        <div class="grid">
+                            <div class="col-6">
+                                <h4 class="cityname">
+                                </h4>
+                            </div>
+                            <div class="col-6 d-flex">
+                                <img src="images/clear.png" alt="" class="weather-icon" height="100px" width="100px">                                   
+                                 <h3 class="temp col-6">India&deg;C</h3>
+
+                            </div>
+                           
+                        </div>
+                    </div>
+             <!-- weater in celcius -->
+                    <span>Fells linke </span><span>Scattered clouds</span><span>Gentle Breeze</span>
+                    <!-- show details -->
+                    <div class="details">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Humidity:</td>
+                                    <td class="humidity">54%</td>
+
+                                    <td>UV:</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"> </th>
+                                    <td>Pressure:</td>
+                                    <td class="pressure">13C</td>
+                                    <td>Visiblity</td>
+                                    <td>10.0km</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- right content -->
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="750" height="302" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=7&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                href="https://embedgooglemap.net/124/"></a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 302px;
+                                    width: 750px;
+                                }
+                            </style><a href="https://www.embedgooglemap.net"></a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 302px;
+                                    width: 750px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container m-2 p-5">
+        <div class="row row-cols-7 m-4">
+          <div class="col">
+            <div class="content">
+               <p class="">1</p>
+                <img src="" alt="">
+                <p class="">1</p>
+            </div>
+          </div>
+          <div class="col"> 
+            <div class="content">
+            <p class="">1</p>
+             <img src="" alt="">
+             <p class="">1</p>
+         </div></div>
+          <div class="col">
+            <div class="content">
+                <p class="">1</p>
+                 <img src="" alt="">
+                 <p class="">1</p>
+             </div>
+        </div>
+          <div class="col">
+            <div class="content">
+                <p class="">1</p>
+                 <img src="" alt="">
+                 <p class="">1</p>
+             </div>
+          </div>
+          <div class="col">
+            <div class="content">
+                <p class="">1</p>
+                 <img src="" alt="">
+                 <p class="">1</p>
+             </div>
+          </div>  <div class="col">
+            <div class="content">
+                <p class="">1</p>
+                 <img src="" alt="">
+                 <p class="">1</p>
+             </div>
+          </div>  <div class="col">
+            <div class="content">
+                <p class="">1</p>
+                 <img src="" alt="">
+                 <p class="">1</p>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        const apikey = "94ccdab307ab7cbae9616d2327f47652";
+        const apiurl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+
+
+        const searchbox = document.querySelector(".search input");
+        const searchbtn = document.querySelector(".search button");
+        const weatherIcon = document.querySelector(".weather-icon");
+        async function checkweather(city) {
+            const response = await fetch(apiurl + city + `&appid=${apikey}`);
+            var data = await response.json();
+            console.log(data);
+            document.querySelector(".cityname").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "&deg;C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+           document.querySelector(".lon").innerHTML = data.coord.lat;
+            document.querySelector(".lat").innerHTML = data.coord.lon;
+            document.querySelector(".humidity").innerHTML=data.main.humidity;
+            document.querySelector(".pressure").innerHTML=data.main.pressure;
+            if (data.weather[0].main == "Clouds") {
+                weatherIcon.src = "images/clouds.png";
+            }
+            else if (data.weather[0].main == "Drizzle") {
+                weatherIcon.src = "images/drizzle.png";
+            }
+            else if (data.weather[0].main == "Humidity") {
+                weatherIcon.src = "images/humidity.png";
+            }
+            else if (data.weather[0].main == "Smoke") {
+                weatherIcon.src = "images/smoke.png";
+            }
+            else if (data.weather[0].main == "Rain") {
+                weatherIcon.src = "images/rain.png";
+            }
+            else if (data.weather[0].main == "Snow") {
+                weatherIcon.src = "images/snow.png";
+            } 
+            else if (data.weather[0].main == "Wind") {
+                weatherIcon.src = "images/wind.png";
+            }
+        }
+        searchbtn.addEventListener("click", () => {
+            checkweather(searchbox.value);
+        })
+const currentDate = new Date();
+let gettime = document.getElementById("date");
+ gettime.innerHTML = `<p>${currentDate.toLocaleString()}</p>`;
+
+ function getweatherdata(){
+    navigator.geolocation.getCurrentPosition((success)=>{
+        let {latitude,longitude}=success.coords;
+        fetch().then(res => res.json()).then(data=>{
+            console.log(data);
+
+        })
+    })
+ }
+ 
+    </script>
+</body>
+
+</html>
